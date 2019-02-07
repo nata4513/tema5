@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .minedyr {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dyr">
+
+    </div>
+
+    <script>
+        let dyr = [
+
+            {
+                "navn": "gris",
+                "type": "pattedyr",
+                "billede": "http://helf-kea.dk/test/gris.png",
+                "levested": "svinefarme"
+            },
+
+            {
+                "navn": "frø",
+                "type": "amfibie",
+                "billede": "http://helf-kea.dk/test/frog.png",
+                "levested": "vandhullet"
+            },
+
+            {
+                "navn": "ræv",
+                "type": "pattedyr",
+                "billede": "http://helf-kea.dk/test/fox.png",
+                "levested": "skoven"
+            },
+
+            {
+                "navn": "sild",
+                "type": "fisk",
+                "billede": "http://helf-kea.dk/test/sild.jpg",
+                "levested": "havet"
+            },
+
+            {
+                "navn": "krokodille",
+                "type": "krybdyr",
+                "billede": "http://helf-kea.dk/test/kroko.jpg",
+                "levested": "floden"
+            }
+
+        ];
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            let dest = document.querySelector(".dyr");
+            dyr.forEach(dyr => {
+                dest.innerHTML += `<div class="minedyr"><h3>${dyr.navn}</h3> <p>${dyr.type} </p> <p>${dyr.levested}</p><br> <img src=${dyr.billede}>`;
+            })
+        }
+
+
+
+        console.log(dyr);
+        //        console.log(`dyr: ${dyr.navn} type: ${dyr.type} levested: ${dyr.levested}`);
+
+        //        document.querySelector(".dyr").innerHTML = `dyr: ${dyr.navn} type: ${dyr.type} levested: ${dyr.levested} <img src="${dyr.billede}">`;
+        //
+        //        document.addEventListener("DOMContentLoaded", start);
+    </script>
+</body>
+
+</html>
